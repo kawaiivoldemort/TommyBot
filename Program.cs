@@ -15,7 +15,8 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 namespace TommyBot {
     class Program {
-        private static readonly TelegramBotClient bot = new TelegramBotClient("477820301:AAFUaR6zsrnNwKrkdfrLZtnRETv_Dj9xvRs");
+	private static string APIKey = "";
+        private static readonly TelegramBotClient bot = new TelegramBotClient(Program.APIKey);
         static void Main(string[] args) {
             bot.OnMessage += HandleMessage;
             bot.OnReceiveError += BotOnReceiveError;
